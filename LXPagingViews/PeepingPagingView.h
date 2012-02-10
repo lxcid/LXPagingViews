@@ -14,6 +14,7 @@
 
 @interface PeepingPagingView : UIView
 
+@property (assign, nonatomic) UIEdgeInsets edgeInsets;
 @property (strong, nonatomic) PagingView *pagingView;
 
 - (id)initWithFrame:(CGRect)theFrame insetsOfPageView:(UIEdgeInsets)theEdgeInsets;

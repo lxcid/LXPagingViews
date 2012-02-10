@@ -11,12 +11,19 @@
 
 @implementation PeepingPagingView
 
+@synthesize edgeInsets = _edgeInsets;
 @synthesize pagingView = _pagingView;
+
+- (void)setFrame:(CGRect)theFrame {
+    [super setFrame:theFrame];
+    self.pagingView.frame = UIEdgeInsetsInsetRect(theFrame, self.edgeInsets);
+}
 
 - (id)initWithFrame:(CGRect)theFrame insetsOfPageView:(UIEdgeInsets)theEdgeInsets {
     self = [super initWithFrame:theFrame];
     if (self) {
-        self.pagingView = [[PagingView alloc] initWithFrame:UIEdgeInsetsInsetRect(theFrame, theEdgeInsets)];
+        self.edgeInsets = theEdgeInsets;
+        self.pagingView = [[PagingView alloc] initWithFrame:UIEdgeInsetsInsetRect(theFrame, self.edgeInsets)];
         self.pagingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:self.pagingView];
     }
