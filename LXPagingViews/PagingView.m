@@ -45,8 +45,14 @@
         self.needsReloadData = YES;
         
         self.visibleReusableViews = [[NSMutableArray alloc] init];
+        
+        [self addObserver:self forKeyPath:@"needsReloadData" options:NSKeyValueObservingOptionNew context:NULL];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"needsReloadData" context:NULL];
 }
 
 - (void)removeAllVisibleReusableViews {
@@ -210,6 +216,25 @@
     } else {
         self.referencingSuperview = NO;
         self.clipsToBounds = YES;
+    }
+}
+
+#pragma mark - Key-Value Observing methods
+
+- (void)observeValueForKeyPath:(NSString *)theKeyPath ofObject:(id)theObject change:(NSDictionary *)theChange context:(void *)theContext {
+    if ([theObject isEqual:self]) {
+        if ([theKeyPath isEqualToString:@"needsReloadData"]) {
+            NSKeyValueChange theKeyValueChangeKind = [[theChange objectForKey:NSKeyValueChangeKindKey] unsignedIntegerValue];
+            switch (theKeyValueChangeKind) {
+                case NSKeyValueChangeSetting: {
+                    if (self.needsReloadData) {
+                        [self setNeedsLayout];
+                    }
+                } break;
+                default: {
+                } break;
+            }
+        }
     }
 }
 
