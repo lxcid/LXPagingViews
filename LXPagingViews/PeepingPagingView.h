@@ -21,4 +21,6 @@
 
 - (void)setPagingViewDataSource:(id<PagingViewDataSource>)thePagingViewDataSource delegate:(id<PagingViewDelegate>)thePagingViewDelegate;
 
+- (void)setPagingViewNeedsReloadData;
+
 @end

@@ -44,4 +44,8 @@
     }
 }
 
+- (void)setPagingViewNeedsReloadData {
+    self.pagingView.needsReloadData = YES;
+}
+
 @end
