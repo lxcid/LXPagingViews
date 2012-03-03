@@ -17,6 +17,7 @@
 @property (nonatomic, readonly, strong) NSMutableDictionary *reusableViews;
 @property (nonatomic, weak) id<PagingViewDataSource> dataSource;
 @property (nonatomic, assign) BOOL needsReloadData;
+@property (nonatomic, assign) NSUInteger selectedPageIndex;
 
 - (UIView<ReusableView> *)dequeueReusableViewWithIdentifier:(NSString *)theIdentifier;
 

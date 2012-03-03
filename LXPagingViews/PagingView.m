@@ -33,6 +33,18 @@
 @synthesize visibleReusableViews = _visibleReusableViews;
 @synthesize referencingSuperview = _referencingSuperview;
 
+- (NSUInteger)selectedPageIndex {
+    if ((self.isTracking) || (self.isDragging) || (self.isDecelerating)) {
+        return NSUIntegerMax;
+    } else {
+        return (NSUInteger)(ABS(self.contentOffset.x) / CGRectGetWidth(self.frame));
+    }
+}
+
+- (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex {
+    self.contentOffset = CGPointMake(-(theSelectedPageIndex * CGRectGetWidth(self.frame)), 0.0f);
+}
+
 - (id)initWithFrame:(CGRect)theFrame {
     NSLog(@"%@", NSStringFromCGRect(theFrame));
     self = [super initWithFrame:theFrame];
