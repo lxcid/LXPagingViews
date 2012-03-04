@@ -33,4 +33,10 @@
 
 @protocol PagingViewDelegate <UIScrollViewDelegate>
 
+@optional
+/**
+ * Returns the selected page index the paging view should display.
+ */
+- (NSUInteger)pagingViewSelectedPageIndex:(PagingView *)thePagingView;
+
 @end

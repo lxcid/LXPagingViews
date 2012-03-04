@@ -79,6 +79,9 @@
         CGSize theContentSize = self.frame.size;
         theContentSize.width *= self.numberOfItems;
         self.contentSize = theContentSize;
+        if ([self.delegate conformsToProtocol:@protocol(PagingViewDelegate)] && [self.delegate respondsToSelector:@selector(pagingViewSelectedPageIndex:)]) {
+            self.selectedPageIndex = [(id<PagingViewDelegate>)self.delegate pagingViewSelectedPageIndex:self];
+        }
         self.needsReloadData = NO;
     }
 }
