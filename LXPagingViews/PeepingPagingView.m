@@ -16,7 +16,7 @@
 
 - (void)setFrame:(CGRect)theFrame {
     [super setFrame:theFrame];
-    self.pagingView.frame = UIEdgeInsetsInsetRect(theFrame, self.edgeInsets);
+    self.pagingView.frame = UIEdgeInsetsInsetRect(self.bounds, self.edgeInsets);
 }
 
 - (id)initWithFrame:(CGRect)theFrame insetsOfPageView:(UIEdgeInsets)theEdgeInsets {
