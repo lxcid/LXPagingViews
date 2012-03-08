@@ -21,6 +21,8 @@
 
 - (UIView<ReusableView> *)dequeueReusableViewWithIdentifier:(NSString *)theIdentifier;
 
+- (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex animated:(BOOL)theAnimated;
+
 @end
 
 @protocol PagingViewDataSource <NSObject>

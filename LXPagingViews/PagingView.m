@@ -45,6 +45,14 @@
     self.contentOffset = CGPointMake((theSelectedPageIndex * CGRectGetWidth(self.frame)), 0.0f);
 }
 
+- (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex animated:(BOOL)theAnimated {
+    if (theAnimated) {
+        [self scrollRectToVisible:CGRectMake((theSelectedPageIndex * CGRectGetWidth(self.frame)), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)) animated:YES];
+    } else {
+        [self setSelectedPageIndex:theSelectedPageIndex];
+    }
+}
+
 - (id)initWithFrame:(CGRect)theFrame {
     NSLog(@"%@", NSStringFromCGRect(theFrame));
     self = [super initWithFrame:theFrame];
