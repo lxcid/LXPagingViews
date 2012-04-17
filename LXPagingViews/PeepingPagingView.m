@@ -23,7 +23,7 @@
     self = [super initWithFrame:theFrame];
     if (self) {
         self.edgeInsets = theEdgeInsets;
-        self.pagingView = [[PagingView alloc] initWithFrame:UIEdgeInsetsInsetRect(theFrame, self.edgeInsets)];
+        self.pagingView = [[PagingView alloc] initWithFrame:UIEdgeInsetsInsetRect(self.bounds, self.edgeInsets)];
         self.pagingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:self.pagingView];
     }
