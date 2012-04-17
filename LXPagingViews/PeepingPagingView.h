@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class PagingView;
-@protocol PagingViewDataSource;
-@protocol PagingViewDelegate;
+#import "PagingView.h"
 
 @interface PeepingPagingView : UIView
 
