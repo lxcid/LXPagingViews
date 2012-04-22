@@ -54,7 +54,11 @@
 // Reference: http://stackoverflow.com/questions/5618780/uiscrollview-with-pagination-showing-part-of-the-previous-following-pages/5618930#5618930
 - (UIView *)hitTest:(CGPoint)thePoint withEvent:(UIEvent *)theEvent {
     if ([self pointInside:thePoint withEvent:theEvent]) {
-        return self.pagingView;
+        UIView *theView = [super hitTest:thePoint withEvent:theEvent];
+        if (theView == self) {
+            theView = self.pagingView;
+        }
+        return theView;
     } else {
         return nil;
     }
