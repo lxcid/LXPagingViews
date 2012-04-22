@@ -18,6 +18,7 @@
 @property (nonatomic, assign) id<PagingViewDataSource> dataSource;
 @property (nonatomic, assign) BOOL needsReloadData;
 @property (nonatomic, assign) NSUInteger selectedPageIndex;
+@property (nonatomic, assign) BOOL ignoreInputsForSelection;
 
 - (UIView<ReusableView> *)dequeueReusableViewWithIdentifier:(NSString *)theIdentifier;
 

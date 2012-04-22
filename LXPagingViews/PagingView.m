@@ -28,13 +28,14 @@
 @synthesize reusableViews = _reusableViews;
 @synthesize dataSource = _dataSource;
 @synthesize needsReloadData = _needsReloadData;
+@synthesize ignoreInputsForSelection = _ignoreInputsForSelection;
 
 @synthesize numberOfItems = _numberOfItems;
 @synthesize visibleReusableViews = _visibleReusableViews;
 @synthesize referencingSuperview = _referencingSuperview;
 
 - (NSUInteger)selectedPageIndex {
-    if ((self.isTracking) || (self.isDragging) || (self.isDecelerating)) {
+    if ((!self.ignoreInputsForSelection) && ((self.isTracking) || (self.isDragging) || (self.isDecelerating))) {
         return NSUIntegerMax;
     } else {
         return (NSUInteger)(self.contentOffset.x / CGRectGetWidth(self.frame));
