@@ -19,6 +19,22 @@
     self.pagingView.frame = UIEdgeInsetsInsetRect(self.bounds, self.edgeInsets);
 }
 
+- (NSUInteger)selectedPageIndex {
+    return self.pagingView.selectedPageIndex;
+}
+
+- (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex {
+    self.pagingView.selectedPageIndex = theSelectedPageIndex;
+}
+
+- (BOOL)ignoreInputsForSelection {
+    return self.pagingView.ignoreInputsForSelection;
+}
+
+- (void)setIgnoreInputsForSelection:(BOOL)theIgnoreInputsForSelection {
+    self.pagingView.ignoreInputsForSelection = theIgnoreInputsForSelection;
+}
+
 - (id)initWithFrame:(CGRect)theFrame insetsOfPageView:(UIEdgeInsets)theEdgeInsets {
     self = [super initWithFrame:theFrame];
     if (self) {

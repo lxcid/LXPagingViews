@@ -13,6 +13,8 @@
 
 @property (assign, nonatomic) UIEdgeInsets edgeInsets;
 @property (strong, nonatomic) PagingView *pagingView;
+@property (nonatomic, assign) NSUInteger selectedPageIndex;
+@property (nonatomic, assign) BOOL ignoreInputsForSelection;
 
 - (id)initWithFrame:(CGRect)theFrame insetsOfPageView:(UIEdgeInsets)theEdgeInsets;
 
