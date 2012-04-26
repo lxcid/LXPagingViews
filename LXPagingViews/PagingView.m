@@ -73,7 +73,11 @@
 }
 
 - (void)dealloc {
-    [self removeObserver:self forKeyPath:@"needsReloadData" context:NULL];
+    if ([self respondsToSelector:@selector(removeObserver:forKeyPath:context:)]) {
+        [self removeObserver:self forKeyPath:@"needsReloadData" context:NULL];
+    } else {
+        [self removeObserver:self forKeyPath:@"needsReloadData"];
+    }
 }
 
 - (void)removeAllVisibleReusableViews {
