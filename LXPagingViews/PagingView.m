@@ -42,6 +42,21 @@
     }
 }
 
+- (UIView<ReusableView> *)selectedPage {
+    NSUInteger theSelectedPageIndex = self.selectedPageIndex;
+    if (theSelectedPageIndex != NSUIntegerMax) {
+        CGFloat theMinX = theSelectedPageIndex * CGRectGetWidth(self.frame);
+        CGFloat theMaxX = theMinX + CGRectGetWidth(self.frame);
+        for (UIView<ReusableView> *theReusableView in self.visibleReusableViews) {
+            CGPoint theCenter = theReusableView.center;
+            if ((theMinX <= theCenter.x) && (theMaxX >= theCenter.y)) {
+                return theReusableView;
+            }
+        }
+    }
+    return nil;
+}
+
 - (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex {
     self.contentOffset = CGPointMake((theSelectedPageIndex * CGRectGetWidth(self.frame)), 0.0f);
 }
