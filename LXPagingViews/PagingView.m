@@ -70,7 +70,6 @@
 }
 
 - (id)initWithFrame:(CGRect)theFrame {
-    NSLog(@"%@", NSStringFromCGRect(theFrame));
     self = [super initWithFrame:theFrame];
     if (self) {
         _reusableViews = [[NSMutableDictionary alloc] init];
