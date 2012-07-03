@@ -34,6 +34,14 @@
 @synthesize visibleReusableViews = _visibleReusableViews;
 @synthesize referencingSuperview = _referencingSuperview;
 
+- (id<PagingViewDelegate>)delegate {
+    return (id<PagingViewDelegate>)[super delegate];
+}
+
+- (void)setDelegate:(id<PagingViewDelegate>)theDelegate {
+    [super setDelegate:theDelegate];
+}
+
 - (NSUInteger)selectedPageIndex {
     if ((!self.ignoreInputsForSelection) && ((self.isTracking) || (self.isDragging) || (self.isDecelerating))) {
         return NSUIntegerMax;

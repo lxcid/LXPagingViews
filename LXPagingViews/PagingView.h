@@ -9,23 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol ReusableView;
-@protocol PagingViewDataSource;
-@protocol PagingViewDelegate;
-
-@interface PagingView : UIScrollView
-
-@property (nonatomic, readonly, strong) NSMutableDictionary *reusableViews;
-@property (nonatomic, assign) id<PagingViewDataSource> dataSource;
-@property (nonatomic, assign) BOOL needsReloadData;
-@property (nonatomic, assign) NSUInteger selectedPageIndex;
-@property (nonatomic, readonly, assign) UIView<ReusableView> *selectedPage;
-@property (nonatomic, assign) BOOL ignoreInputsForSelection;
-
-- (UIView<ReusableView> *)dequeueReusableViewWithIdentifier:(NSString *)theIdentifier;
-
-- (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex animated:(BOOL)theAnimated;
-
-@end
+@class PagingView;
 
 @protocol PagingViewDataSource <NSObject>
 
@@ -42,5 +26,21 @@
  * Returns the selected page index the paging view should display.
  */
 - (NSUInteger)pagingViewSelectedPageIndex:(PagingView *)thePagingView;
+
+@end
+
+@interface PagingView : UIScrollView
+
+@property (nonatomic, readonly, strong) NSMutableDictionary *reusableViews;
+@property (nonatomic, assign) id<PagingViewDataSource> dataSource;
+@property (nonatomic, assign) id<PagingViewDelegate> delegate;
+@property (nonatomic, assign) BOOL needsReloadData;
+@property (nonatomic, assign) NSUInteger selectedPageIndex;
+@property (nonatomic, readonly, assign) UIView<ReusableView> *selectedPage;
+@property (nonatomic, assign) BOOL ignoreInputsForSelection;
+
+- (UIView<ReusableView> *)dequeueReusableViewWithIdentifier:(NSString *)theIdentifier;
+
+- (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex animated:(BOOL)theAnimated;
 
 @end
