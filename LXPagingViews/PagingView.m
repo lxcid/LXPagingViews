@@ -18,6 +18,7 @@
 @property (nonatomic, assign) NSUInteger numberOfItems;
 @property (nonatomic, strong) NSMutableArray *visibleReusableViews;
 @property (nonatomic, assign, getter = isReferencingSuperview) BOOL referencingSuperview;
+@property (nonatomic, assign) NSUInteger selectedPageIndexBeforeRotation;
 
 - (void)layoutSubviewsFromIndex:(NSUInteger)theFromIndex toIndex:(NSUInteger)theToIndex;
 
@@ -33,6 +34,7 @@
 @synthesize numberOfItems = _numberOfItems;
 @synthesize visibleReusableViews = _visibleReusableViews;
 @synthesize referencingSuperview = _referencingSuperview;
+@synthesize selectedPageIndexBeforeRotation = _selectedPageIndexBeforeRotation;
 
 - (id<PagingViewDelegate>)delegate {
     return (id<PagingViewDelegate>)[super delegate];
@@ -286,6 +288,20 @@
             }
         }
     }
+}
+
+#pragma mark - Rotation methods
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)theToInterfaceOrientation duration:(NSTimeInterval)theDuration {
+    self.selectedPageIndexBeforeRotation = self.selectedPageIndex;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)theInterfaceOrientation duration:(NSTimeInterval)theDuration {
+    self.needsReloadData = YES;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+    self.selectedPageIndex = self.selectedPageIndexBeforeRotation;
+    self.selectedPageIndexBeforeRotation = 0;
 }
 
 @end

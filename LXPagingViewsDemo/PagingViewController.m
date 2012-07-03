@@ -65,6 +65,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)theToInterfaceOrientation duration:(NSTimeInterval)theDuration {
+    [self.pagingView willAnimateRotationToInterfaceOrientation:theToInterfaceOrientation duration:theDuration];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)theToInterfaceOrientation duration:(NSTimeInterval)theDuration {
+    [self.pagingView willRotateToInterfaceOrientation:theToInterfaceOrientation duration:theDuration];
+}
+
 #pragma mark - PagingViewDelegate methods
 
 - (NSInteger)numberOfItemsInPagingView:(PagingView *)thePagingView {
