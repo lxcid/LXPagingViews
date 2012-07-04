@@ -79,6 +79,25 @@
     }
 }
 
+- (NSUInteger)indexOfVisiblePage:(UIView<ReusableView> *)thePage {
+    if ([self.visibleReusableViews containsObject:thePage]) {
+        return (NSUInteger)(thePage.frame.origin.x / CGRectGetWidth(self.frame));
+    } else {
+        return NSUIntegerMax;
+    }
+}
+
+- (UIView<ReusableView> *)visiblePageAtIndex:(NSUInteger)theInteger {
+    __block UIView<ReusableView> *thePageInQuery = nil;
+    [self.visibleReusableViews enumerateObjectsUsingBlock:^(id theObject, NSUInteger theIndex, BOOL *theStop) {
+        if ([self indexOfVisiblePage:(UIView<ReusableView> *)theObject] == theInteger) {
+            thePageInQuery = (UIView<ReusableView> *)theObject;
+            *theStop = YES;
+        }
+    }];
+    return thePageInQuery;
+}
+
 - (id)initWithFrame:(CGRect)theFrame {
     self = [super initWithFrame:theFrame];
     if (self) {

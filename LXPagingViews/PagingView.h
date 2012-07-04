@@ -43,6 +43,9 @@
 
 - (void)setSelectedPageIndex:(NSUInteger)theSelectedPageIndex animated:(BOOL)theAnimated;
 
+- (NSUInteger)indexOfVisiblePage:(UIView<ReusableView> *)thePage;
+- (UIView<ReusableView> *)visiblePageAtIndex:(NSUInteger)theInteger;
+
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)theToInterfaceOrientation duration:(NSTimeInterval)theDuration;
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)theInterfaceOrientation duration:(NSTimeInterval)theDuration;
 
