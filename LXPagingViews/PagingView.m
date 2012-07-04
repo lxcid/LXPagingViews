@@ -46,7 +46,7 @@
 
 - (NSUInteger)selectedPageIndex {
     if ((!self.ignoreInputsForSelection) && ((self.isTracking) || (self.isDragging) || (self.isDecelerating))) {
-        return NSUIntegerMax;
+        return NSNotFound;
     } else {
         return (NSUInteger)(self.contentOffset.x / CGRectGetWidth(self.frame));
     }
@@ -54,7 +54,7 @@
 
 - (UIView<ReusableView> *)selectedPage {
     NSUInteger theSelectedPageIndex = self.selectedPageIndex;
-    if (theSelectedPageIndex != NSUIntegerMax) {
+    if (theSelectedPageIndex != NSNotFound) {
         CGFloat theMinX = theSelectedPageIndex * CGRectGetWidth(self.frame);
         CGFloat theMaxX = theMinX + CGRectGetWidth(self.frame);
         for (UIView<ReusableView> *theReusableView in self.visibleReusableViews) {
@@ -83,7 +83,7 @@
     if ([self.visibleReusableViews containsObject:thePage]) {
         return (NSUInteger)(thePage.frame.origin.x / CGRectGetWidth(self.frame));
     } else {
-        return NSUIntegerMax;
+        return NSNotFound;
     }
 }
 
