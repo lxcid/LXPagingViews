@@ -37,7 +37,8 @@
 @property (nonatomic, assign) BOOL needsReloadData;
 @property (nonatomic, assign) NSUInteger selectedPageIndex;
 @property (nonatomic, readonly, assign) UIView<ReusableView> *selectedPage;
-@property (nonatomic, assign) BOOL ignoreInputsForSelection;
+@property (nonatomic, assign, getter = isIgnoreInputsForSelection) BOOL ignoreInputsForSelection;
+@property (nonatomic, assign, getter = isReusableViewsEnabled) BOOL reusableViewsEnabled;
 
 - (UIView<ReusableView> *)dequeueReusableViewWithIdentifier:(NSString *)theIdentifier;
 

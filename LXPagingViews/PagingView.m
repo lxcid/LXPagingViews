@@ -35,6 +35,7 @@
 @synthesize visibleReusableViews = _visibleReusableViews;
 @synthesize referencingSuperview = _referencingSuperview;
 @synthesize selectedPageIndexBeforeRotation = _selectedPageIndexBeforeRotation;
+@synthesize reusableViewsEnabled = _reusableViewsEnabled;
 
 - (id<PagingViewDelegate>)delegate {
     return (id<PagingViewDelegate>)[super delegate];
@@ -107,6 +108,7 @@
         self.showsVerticalScrollIndicator = NO;
         self.scrollsToTop = NO;
         self.needsReloadData = YES;
+        self.reusableViewsEnabled = YES;
         
         self.visibleReusableViews = [[NSMutableArray alloc] init];
         
@@ -251,6 +253,9 @@
 #pragma mark - Enqueue/Dequeue method
 
 - (void)enqueueReusableView:(UIView<ReusableView> *)theReusableView {
+    if (!self.isReusableViewsEnabled) {
+        return;
+    }
     NSMutableArray *theQueue = [self.reusableViews objectForKey:theReusableView.reuseIdentifier];
     if (theQueue == nil) {
         theQueue = [[NSMutableArray alloc] init];
