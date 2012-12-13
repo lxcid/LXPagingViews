@@ -105,4 +105,20 @@
     return thePageView;
 }
 
+#pragma mark - UIScrollViewDelegate methods
+
+- (void)scrollViewDidEndDragging:(PagingView *)thePagingView willDecelerate:(BOOL)theDecelerate {
+    if (!theDecelerate) {
+        NSLog(@"Selected Page Index: %d", thePagingView.selectedPageIndex);
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(PagingView *)thePagingView {
+    NSLog(@"Selected Page Index: %d", thePagingView.selectedPageIndex);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(PagingView *)thePagingView {
+    NSLog(@"Selected Page Index: %d", thePagingView.selectedPageIndex);
+}
+
 @end
