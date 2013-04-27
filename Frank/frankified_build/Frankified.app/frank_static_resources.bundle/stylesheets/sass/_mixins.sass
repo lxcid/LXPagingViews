@@ -1,0 +1,137 @@
+@mixin center-align($height: "", $width: "")
+  top: 50%
+  margin-top: -$height/2
+  left: 50%
+  margin-left: -$width/2
+
+@mixin absolute-fill
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  height: 100%
+  width: 100%
+
+@mixin clearfix-after
+  &:after
+    content: ""
+    display: block
+    height: 1px
+    width: 1px
+    clear: both
+    position: relative
+
+@mixin transition ( $trans )
+  -webkit-transition: ( $trans )
+  -moz-transition: ( $trans )
+  transition: ( $trans )
+
+@mixin transition-two ( $trans, $trans2 )
+  -webkit-transition: ( $trans, $trans2 )
+  -moz-transition: ( $trans, $trans2 )
+  transition: ( $trans, $trans2 )
+
+@mixin transition-transform( $duration )
+  -webkit-transition: -webkit-transform $duration
+  -moz-transition: -moz-transform $duration
+  -ms-transition: -ms-transform $duration
+  -o-transition: -o-transform $duration
+  transition: transform $duration
+
+@mixin transition-delay ( $delay )
+  -webkit-transition-delay: ( $delay )
+  -moz-transition-delay: ( $delay )
+  transition-delay: ( $delay )
+
+@mixin transition-property ( $property )
+  -webkit-transition-property: ( $property )
+  -moz-transition-property: ( $property )
+  transition-property: ( $property )
+
+@mixin transition-property-two ( $property1, $property2 )
+  -webkit-transition-property: ( $property1, $property2 )
+  -moz-transition-property: ( $property1, $property2 )
+  transition-property: ( $property1, $property2 )
+
+@mixin transition-duration ( $duration )
+  -webkit-transition-duration: ( $duration )
+  -moz-transition-duration: ( $duration )
+  transition-duration: ( $duration )
+
+@mixin animation ( $animation )
+  -webkit-animation: ( $animation )
+  -moz-animation: ( $animation )
+  -ms-animation: ( $animation )
+  animation: ( $animation )
+
+@mixin text-shadow( $shadow )
+  -webkit-text-shadow: ( $shadow )
+  -moz-text-shadow: ( $shadow )
+  text-shadow: ( $shadow )
+
+@mixin box-shadow( $shadow )
+  -webkit-box-shadow: ( $shadow )
+  -moz-box-shadow: ( $shadow )
+  box-shadow: ( $shadow )
+
+@mixin box-shadow-two( $shadow1, $shadow2 )
+  -webkit-box-shadow: ( $shadow1, $shadow2 )
+  -moz-box-shadow: ( $shadow1, $shadow2 )
+  box-shadow: ( $shadow1, $shadow2 )
+
+@mixin transform ( $transform )
+  -webkit-transform: ( $transform )
+  -moz-transform: ( $transform )
+  -ms-transform: ( $transform )
+  -o-transform: ( $transform )
+  transform: ( $transform )
+
+@mixin transform-style ( $style )
+  -webkit-transform-style: ( $style )
+  -moz-transform-style: ( $style )
+  -ms-transform-style: ( $style )
+  transform-style: ( $style )
+
+@mixin backface-visibility ( $visibility )
+  -webkit-backface-visibility: ( $visibility )
+  -moz-backface-visibility: ( $visibility )
+  -ms-backface-visibility: ( $visibility )
+  backface-visibility: ( $visibility )
+
+@mixin perspective ( $perspective )
+  -webkit-perspective: ( $perspective )
+  -moz-perspective: ( $perspective )
+  -ms-perspective: ( $perspective )
+  perspective: ( $perspective )
+
+@mixin perspective-origin( $origin )
+  -webkit-perspective-origin: ( $origin )
+  -moz-perspective-origin: ( $origin )
+  -ms-perspective-origin: ( $origin )
+  perspective-origin: ( $origin )
+
+@mixin border-radius ( $radius )
+  -webkit-border-radius: ( $radius )
+  -moz-border-radius: ( $radius )
+  border-radius: ( $radius )
+
+@mixin box-sizing( $box-size )
+  -webkit-box-sizing: ( $box-size )
+  -khtml-box-sizing: ( $box-size )
+  -icab-box-sizing: ( $box-size )
+  -moz-box-sizing: ( $box-size )
+  -o-box-sizing: ( $box-size )
+  box-sizing: ( $box-size )
+
+@mixin user-select ( $user-select )
+  -webkit-user-select: ( $user-select )
+  -moz-user-select: ( $user-select )
+  -ms-user-select: ( $user-select )
+  user-select: ( $user-select )
+
+@mixin linear-gradient ( $start-point, $stop1, $stop2 )
+  background-image: -webkit-linear-gradient( $start-point, $stop1, $stop2 )
+  background-image: -moz-linear-gradient( $start-point, $stop1, $stop2 )
+  background-image: -ms-linear-gradient( $start-point, $stop1, $stop2 )
+  background-image: linear-gradient( $start-point, $stop1, $stop2 )

@@ -1,329 +1,803 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		AB0838CF14E2ED6F00BBBDA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0838CE14E2ED6F00BBBDA2 /* UIKit.framework */; };
-		AB0838D114E2ED6F00BBBDA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0838D014E2ED6F00BBBDA2 /* Foundation.framework */; };
-		AB0838D314E2ED6F00BBBDA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0838D214E2ED6F00BBBDA2 /* CoreGraphics.framework */; };
-		AB0838D914E2ED6F00BBBDA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB0838D714E2ED6F00BBBDA2 /* InfoPlist.strings */; };
-		AB0838DB14E2ED6F00BBBDA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0838DA14E2ED6F00BBBDA2 /* main.m */; };
-		AB0838DF14E2ED6F00BBBDA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0838DE14E2ED6F00BBBDA2 /* AppDelegate.m */; };
-		AB0838EF14E2EDD300BBBDA2 /* PagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0838EB14E2EDD300BBBDA2 /* PagingView.m */; };
-		AB0838F014E2EDD300BBBDA2 /* PeepingPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0838ED14E2EDD300BBBDA2 /* PeepingPagingView.m */; };
-		AB0838F714E2EDF000BBBDA2 /* PagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0838F614E2EDF000BBBDA2 /* PagingViewController.m */; };
-		AB08390214E2EEF300BBBDA2 /* ListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB08390114E2EEF300BBBDA2 /* ListingViewController.m */; };
-		AB08390514E2EFB000BBBDA2 /* PeepingPagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB08390414E2EFB000BBBDA2 /* PeepingPagingViewController.m */; };
-		AB08390814E2F07C00BBBDA2 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB08390714E2F07C00BBBDA2 /* PageView.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		AB0838CA14E2ED6F00BBBDA2 /* LXPagingViewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXPagingViewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB0838CE14E2ED6F00BBBDA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AB0838D014E2ED6F00BBBDA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AB0838D214E2ED6F00BBBDA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB0838D614E2ED6F00BBBDA2 /* LXPagingViewsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LXPagingViewsDemo-Info.plist"; sourceTree = "<group>"; };
-		AB0838D814E2ED6F00BBBDA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AB0838DA14E2ED6F00BBBDA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB0838DC14E2ED6F00BBBDA2 /* LXPagingViewsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LXPagingViewsDemo-Prefix.pch"; sourceTree = "<group>"; };
-		AB0838DD14E2ED6F00BBBDA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AB0838DE14E2ED6F00BBBDA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AB0838EA14E2EDD300BBBDA2 /* PagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingView.h; sourceTree = "<group>"; };
-		AB0838EB14E2EDD300BBBDA2 /* PagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingView.m; sourceTree = "<group>"; };
-		AB0838EC14E2EDD300BBBDA2 /* PeepingPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeepingPagingView.h; sourceTree = "<group>"; };
-		AB0838ED14E2EDD300BBBDA2 /* PeepingPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeepingPagingView.m; sourceTree = "<group>"; };
-		AB0838EE14E2EDD300BBBDA2 /* ReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableView.h; sourceTree = "<group>"; };
-		AB0838F514E2EDF000BBBDA2 /* PagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingViewController.h; sourceTree = "<group>"; };
-		AB0838F614E2EDF000BBBDA2 /* PagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagingViewController.m; sourceTree = "<group>"; };
-		AB08390014E2EEF300BBBDA2 /* ListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingViewController.h; sourceTree = "<group>"; };
-		AB08390114E2EEF300BBBDA2 /* ListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingViewController.m; sourceTree = "<group>"; };
-		AB08390314E2EFB000BBBDA2 /* PeepingPagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeepingPagingViewController.h; sourceTree = "<group>"; };
-		AB08390414E2EFB000BBBDA2 /* PeepingPagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeepingPagingViewController.m; sourceTree = "<group>"; };
-		AB08390614E2F07C00BBBDA2 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
-		AB08390714E2F07C00BBBDA2 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		AB0838C714E2ED6F00BBBDA2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB0838CF14E2ED6F00BBBDA2 /* UIKit.framework in Frameworks */,
-				AB0838D114E2ED6F00BBBDA2 /* Foundation.framework in Frameworks */,
-				AB0838D314E2ED6F00BBBDA2 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		AB0838BF14E2ED6F00BBBDA2 = {
-			isa = PBXGroup;
-			children = (
-				AB0838E914E2EDD300BBBDA2 /* LXPagingViews */,
-				AB0838D414E2ED6F00BBBDA2 /* LXPagingViewsDemo */,
-				AB0838CD14E2ED6F00BBBDA2 /* Frameworks */,
-				AB0838CB14E2ED6F00BBBDA2 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		AB0838CB14E2ED6F00BBBDA2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB0838CA14E2ED6F00BBBDA2 /* LXPagingViewsDemo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AB0838CD14E2ED6F00BBBDA2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AB0838CE14E2ED6F00BBBDA2 /* UIKit.framework */,
-				AB0838D014E2ED6F00BBBDA2 /* Foundation.framework */,
-				AB0838D214E2ED6F00BBBDA2 /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AB0838D414E2ED6F00BBBDA2 /* LXPagingViewsDemo */ = {
-			isa = PBXGroup;
-			children = (
-				AB0838FF14E2EE5500BBBDA2 /* Views */,
-				AB0838FB14E2EE2900BBBDA2 /* View Controllers */,
-				AB0838DD14E2ED6F00BBBDA2 /* AppDelegate.h */,
-				AB0838DE14E2ED6F00BBBDA2 /* AppDelegate.m */,
-				AB0838D514E2ED6F00BBBDA2 /* Supporting Files */,
-			);
-			path = LXPagingViewsDemo;
-			sourceTree = "<group>";
-		};
-		AB0838D514E2ED6F00BBBDA2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AB0838D614E2ED6F00BBBDA2 /* LXPagingViewsDemo-Info.plist */,
-				AB0838D714E2ED6F00BBBDA2 /* InfoPlist.strings */,
-				AB0838DA14E2ED6F00BBBDA2 /* main.m */,
-				AB0838DC14E2ED6F00BBBDA2 /* LXPagingViewsDemo-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AB0838E914E2EDD300BBBDA2 /* LXPagingViews */ = {
-			isa = PBXGroup;
-			children = (
-				AB0838EA14E2EDD300BBBDA2 /* PagingView.h */,
-				AB0838EB14E2EDD300BBBDA2 /* PagingView.m */,
-				AB0838EC14E2EDD300BBBDA2 /* PeepingPagingView.h */,
-				AB0838ED14E2EDD300BBBDA2 /* PeepingPagingView.m */,
-				AB0838EE14E2EDD300BBBDA2 /* ReusableView.h */,
-			);
-			path = LXPagingViews;
-			sourceTree = "<group>";
-		};
-		AB0838FB14E2EE2900BBBDA2 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				AB08390014E2EEF300BBBDA2 /* ListingViewController.h */,
-				AB08390114E2EEF300BBBDA2 /* ListingViewController.m */,
-				AB0838F514E2EDF000BBBDA2 /* PagingViewController.h */,
-				AB0838F614E2EDF000BBBDA2 /* PagingViewController.m */,
-				AB08390314E2EFB000BBBDA2 /* PeepingPagingViewController.h */,
-				AB08390414E2EFB000BBBDA2 /* PeepingPagingViewController.m */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		AB0838FF14E2EE5500BBBDA2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AB08390614E2F07C00BBBDA2 /* PageView.h */,
-				AB08390714E2F07C00BBBDA2 /* PageView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		AB0838C914E2ED6F00BBBDA2 /* LXPagingViewsDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB0838E214E2ED6F00BBBDA2 /* Build configuration list for PBXNativeTarget "LXPagingViewsDemo" */;
-			buildPhases = (
-				AB0838C614E2ED6F00BBBDA2 /* Sources */,
-				AB0838C714E2ED6F00BBBDA2 /* Frameworks */,
-				AB0838C814E2ED6F00BBBDA2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LXPagingViewsDemo;
-			productName = LXPagingViewsDemo;
-			productReference = AB0838CA14E2ED6F00BBBDA2 /* LXPagingViewsDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		AB0838C114E2ED6F00BBBDA2 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "d--buzz";
-			};
-			buildConfigurationList = AB0838C414E2ED6F00BBBDA2 /* Build configuration list for PBXProject "LXPagingViewsDemo" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = AB0838BF14E2ED6F00BBBDA2;
-			productRefGroup = AB0838CB14E2ED6F00BBBDA2 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				AB0838C914E2ED6F00BBBDA2 /* LXPagingViewsDemo */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		AB0838C814E2ED6F00BBBDA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB0838D914E2ED6F00BBBDA2 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		AB0838C614E2ED6F00BBBDA2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB0838DB14E2ED6F00BBBDA2 /* main.m in Sources */,
-				AB0838DF14E2ED6F00BBBDA2 /* AppDelegate.m in Sources */,
-				AB0838EF14E2EDD300BBBDA2 /* PagingView.m in Sources */,
-				AB0838F014E2EDD300BBBDA2 /* PeepingPagingView.m in Sources */,
-				AB0838F714E2EDF000BBBDA2 /* PagingViewController.m in Sources */,
-				AB08390214E2EEF300BBBDA2 /* ListingViewController.m in Sources */,
-				AB08390514E2EFB000BBBDA2 /* PeepingPagingViewController.m in Sources */,
-				AB08390814E2F07C00BBBDA2 /* PageView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AB0838D714E2ED6F00BBBDA2 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB0838D814E2ED6F00BBBDA2 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		AB0838E014E2ED6F00BBBDA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		AB0838E114E2ED6F00BBBDA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		AB0838E314E2ED6F00BBBDA2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LXPagingViewsDemo/LXPagingViewsDemo-Prefix.pch";
-				INFOPLIST_FILE = "LXPagingViewsDemo/LXPagingViewsDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		AB0838E414E2ED6F00BBBDA2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LXPagingViewsDemo/LXPagingViewsDemo-Prefix.pch";
-				INFOPLIST_FILE = "LXPagingViewsDemo/LXPagingViewsDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		AB0838C414E2ED6F00BBBDA2 /* Build configuration list for PBXProject "LXPagingViewsDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB0838E014E2ED6F00BBBDA2 /* Debug */,
-				AB0838E114E2ED6F00BBBDA2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB0838E214E2ED6F00BBBDA2 /* Build configuration list for PBXNativeTarget "LXPagingViewsDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB0838E314E2ED6F00BBBDA2 /* Debug */,
-				AB0838E414E2ED6F00BBBDA2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = AB0838C114E2ED6F00BBBDA2 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>AB0838BF14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838E914E2EDD300BBBDA2</string>
+				<string>AB0838D414E2ED6F00BBBDA2</string>
+				<string>AB0838CD14E2ED6F00BBBDA2</string>
+				<string>AB0838CB14E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838C114E2ED6F00BBBDA2</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0420</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>d--buzz</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>AB0838C414E2ED6F00BBBDA2</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>AB0838BF14E2ED6F00BBBDA2</string>
+			<key>productRefGroup</key>
+			<string>AB0838CB14E2ED6F00BBBDA2</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>AB0838C914E2ED6F00BBBDA2</string>
+			</array>
+		</dict>
+		<key>AB0838C414E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AB0838E014E2ED6F00BBBDA2</string>
+				<string>AB0838E114E2ED6F00BBBDA2</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AB0838C614E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB0838DB14E2ED6F00BBBDA2</string>
+				<string>AB0838DF14E2ED6F00BBBDA2</string>
+				<string>AB0838EF14E2EDD300BBBDA2</string>
+				<string>AB0838F014E2EDD300BBBDA2</string>
+				<string>AB0838F714E2EDF000BBBDA2</string>
+				<string>AB08390214E2EEF300BBBDA2</string>
+				<string>AB08390514E2EFB000BBBDA2</string>
+				<string>AB08390814E2F07C00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB0838C714E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB0838CF14E2ED6F00BBBDA2</string>
+				<string>AB0838D114E2ED6F00BBBDA2</string>
+				<string>AB0838D314E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB0838C814E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB0838D914E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB0838C914E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AB0838E214E2ED6F00BBBDA2</string>
+			<key>buildPhases</key>
+			<array>
+				<string>AB0838C614E2ED6F00BBBDA2</string>
+				<string>AB0838C714E2ED6F00BBBDA2</string>
+				<string>AB0838C814E2ED6F00BBBDA2</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>LXPagingViewsDemo</string>
+			<key>productName</key>
+			<string>LXPagingViewsDemo</string>
+			<key>productReference</key>
+			<string>AB0838CA14E2ED6F00BBBDA2</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>AB0838CA14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>LXPagingViewsDemo.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AB0838CB14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838CA14E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838CD14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838CE14E2ED6F00BBBDA2</string>
+				<string>AB0838D014E2ED6F00BBBDA2</string>
+				<string>AB0838D214E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838CE14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB0838CF14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838CE14E2ED6F00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838D014E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB0838D114E2ED6F00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838D014E2ED6F00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838D214E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB0838D314E2ED6F00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838D214E2ED6F00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838D414E2ED6F00BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838FF14E2EE5500BBBDA2</string>
+				<string>AB0838FB14E2EE2900BBBDA2</string>
+				<string>AB0838DD14E2ED6F00BBBDA2</string>
+				<string>AB0838DE14E2ED6F00BBBDA2</string>
+				<string>AB0838D514E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LXPagingViewsDemo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838D514E2ED6F00BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838D614E2ED6F00BBBDA2</string>
+				<string>AB0838D714E2ED6F00BBBDA2</string>
+				<string>AB0838DA14E2ED6F00BBBDA2</string>
+				<string>AB0838DC14E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838D614E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>LXPagingViewsDemo-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838D714E2ED6F00BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838D814E2ED6F00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838D814E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838D914E2ED6F00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838D714E2ED6F00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838DA14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838DB14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838DA14E2ED6F00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838DC14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LXPagingViewsDemo-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838DD14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838DE14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838DF14E2ED6F00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838DE14E2ED6F00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838E014E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>GCC_WARN_ABOUT_MISSING_PROTOTYPES</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AB0838E114E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>GCC_WARN_ABOUT_MISSING_PROTOTYPES</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.0</string>
+				<key>OTHER_CFLAGS</key>
+				<string>-DNS_BLOCK_ASSERTIONS=1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AB0838E214E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AB0838E314E2ED6F00BBBDA2</string>
+				<string>AB0838E414E2ED6F00BBBDA2</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AB0838E314E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>LXPagingViewsDemo/LXPagingViewsDemo-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LXPagingViewsDemo/LXPagingViewsDemo-Info.plist</string>
+				<key>LIBRARY_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(FRANK_LIBRARY_SEARCH_PATHS)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(FRANK_LDFLAGS)</string>
+				</array>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AB0838E414E2ED6F00BBBDA2</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>LXPagingViewsDemo/LXPagingViewsDemo-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>LXPagingViewsDemo/LXPagingViewsDemo-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AB0838E914E2EDD300BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB0838EA14E2EDD300BBBDA2</string>
+				<string>AB0838EB14E2EDD300BBBDA2</string>
+				<string>AB0838EC14E2EDD300BBBDA2</string>
+				<string>AB0838ED14E2EDD300BBBDA2</string>
+				<string>AB0838EE14E2EDD300BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LXPagingViews</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838EA14E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PagingView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838EB14E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PagingView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838EC14E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PeepingPagingView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838ED14E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PeepingPagingView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838EE14E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ReusableView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838EF14E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838EB14E2EDD300BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838F014E2EDD300BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838ED14E2EDD300BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838F514E2EDF000BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PagingViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838F614E2EDF000BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PagingViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838F714E2EDF000BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB0838F614E2EDF000BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB0838FB14E2EE2900BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB08390014E2EEF300BBBDA2</string>
+				<string>AB08390114E2EEF300BBBDA2</string>
+				<string>AB0838F514E2EDF000BBBDA2</string>
+				<string>AB0838F614E2EDF000BBBDA2</string>
+				<string>AB08390314E2EFB000BBBDA2</string>
+				<string>AB08390414E2EFB000BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>View Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB0838FF14E2EE5500BBBDA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB08390614E2F07C00BBBDA2</string>
+				<string>AB08390714E2F07C00BBBDA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Views</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390014E2EEF300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ListingViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390114E2EEF300BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ListingViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390214E2EEF300BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB08390114E2EEF300BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB08390314E2EFB000BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PeepingPagingViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390414E2EFB000BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PeepingPagingViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390514E2EFB000BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB08390414E2EFB000BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB08390614E2F07C00BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>PageView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390714E2F07C00BBBDA2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>PageView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB08390814E2F07C00BBBDA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB08390714E2F07C00BBBDA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>AB0838C114E2ED6F00BBBDA2</string>
+</dict>
+</plist>

@@ -1,0 +1,81 @@
+//----------------------------------------------
+// horizontal layout
+$wrap-middle-width: 60%;
+$wrap-outter-width: (100% - $wrap-middle-width)/2;
+//----------------------------------------------
+
+#selector-test {
+  position: relative;
+  text-align: center;
+  padding: $selector-test-toolbar-vt-padding 0;
+  .wrap {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    padding: 0 .5em;
+    &.middle { width: $wrap-middle-width; }
+    &.outter { width: $wrap-outter-width; }
+  }//.wrap
+
+  #query { width: 100%; }
+
+  label {
+    display: block;
+    text-align: left;
+    text-transform: capitalize;
+    &:after {
+      content: "#{$arrow-right-down}";
+      font-size: .8em;
+      font-weight: bold;
+      padding-left: .3em;
+    }
+  }//label
+}//#selector-test
+
+$drop-indicator-width: 2em;
+
+.dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  * { z-index: $dropdown-child-z; }
+
+  button {
+    position: relative;
+    width: 100%;
+    padding-left: .8em;
+    padding-right: $drop-indicator-width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }//button
+
+  ul {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    float: left;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-two( visibility 0s linear 0.2s,opacity 0.2s linear );
+    &.shown {
+      opacity: 1;
+      visibility:visible;
+      @include transition-delay( 0s );
+    }//&.shown
+  }//ul
+
+  .drop-indicator {
+    color: #eee;
+    position: absolute;
+    width: $drop-indicator-width;
+    right: 0;
+    top: 6px;
+    bottom: 6px;
+    border-left: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    @include user-select( none );
+  }//.drop-indicator
+}//.dropdown

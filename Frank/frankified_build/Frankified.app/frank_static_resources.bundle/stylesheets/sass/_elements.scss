@@ -1,0 +1,28 @@
+html {
+  background-color: #efefef;
+  font-family: $sans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+$btn-input-inner-shadow: inset 0 1px 3px 0px rgba(0,0,0, .7);
+$btn-input-vertical-padding: 8px;
+$btn-input-height: $base-line-height + ($btn-input-vertical-padding*2);
+
+input, button {
+  padding: $btn-input-vertical-padding 2em $btn-input-vertical-padding 0.5em;
+  @include border-radius( 3px );
+}
+
+input {
+  text-align: left;
+  @include box-shadow-two( 0 2px 3px 0 rgba(255,255,255,.4), $btn-input-inner-shadow );
+}
+
+button {
+  @include light-text;
+  @include linear-gradient(top, #ddd, #999);
+  @include box-shadow( $btn-input-inner-shadow );
+  &:hover { @include linear-gradient(top, #ccc, #999); }
+  &:active { background: #999; }
+}//button

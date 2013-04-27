@@ -1,0 +1,13 @@
+//--------------------------------------------------------
+// veritcal layout for entire page.
+//--------------------------------------------------------
+// for horizontal layouts, see individual partial files.
+//--------------------------------------------------------
+
+$header-height: 40px;
+$toast-height: $header-height;
+$refresh-size: $header-height;
+$selector-test-toolbar-vt-padding: 8px;
+
+$selector-test-height: $btn-input-height + $label-line-height + ($selector-test-toolbar-vt-padding*2);
+$columns-top: $header-height + $selector-test-height;

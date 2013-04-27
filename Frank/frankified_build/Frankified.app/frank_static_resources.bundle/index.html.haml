@@ -1,0 +1,76 @@
+!!! 5
+%html
+  %head
+    %meta(charset="utf-8")
+    %title Symbiote
+
+    %script(src="js/lib/jquery.min.js")
+    %script(src="js/lib/jquery-ui.min.js")
+    %script(src="js/lib/jquery.treeview.js")
+    %script(src="js/lib/coffee-script.js")
+    %script(src="js/lib/raphael.js")
+    %script(src="js/lib/underscore.js")
+    %script(src="js/lib/backbone.js")
+    %script(src="js/lib/json2.js")
+
+    %script(data-main="/js/main" src="js/lib/require.js")
+
+    %link(href="/stylesheets/css/symbiote.css" rel="stylesheet")
+    %link(href="pictos/pictos.css" rel="stylesheet")
+
+  %body
+    %header#header
+      %h1 symbiote
+      .toast
+      #refresh
+        %button#dump_button
+          %span
+
+    %section.symbiote_shell
+      %article#selector-test
+        .wrap.outter<>
+          %label.selector-engine-label use
+          .selector-engine.dropdown
+
+        .wrap.middle<>
+          %label.query<> to select views matching
+          %input#query(placeholder="Selector label marked:'Search'")<>
+
+        .wrap.outter>
+          %label and then
+          .action-buttons.dropdown
+
+    %section.the-columns
+      #list-tabs
+        %ul
+          %li
+            %a(href="#dom-dump") View Hierarchy
+          %li
+            %a(href="#accessible-views-tab") Accessible Elements
+        #dom-dump
+          %ul
+        #accessible-views-tab
+          %div.hints
+            %p Here is a list of all elements with accessibility labels.
+            %p Clicking on a row will flash that view element in the simulator. Hover over a row to see the selector used to flash that view element.
+          #accessible-views
+
+      #inspect-tabs
+        %ul
+          %li
+            %a(href="#dom-detail") View Properties
+          %li
+            %a(href="#ui-locator") View Locator
+        #ui-locator
+          #live-view
+            %button
+              Live
+              %span Y
+          #asploder
+            %button
+              Asplode
+          %button#ui-locator-rotator 1
+          #ui-locator-view
+
+        #dom-detail
+          %p Click an element in the view hierarchy on the right to see details of that element here.
