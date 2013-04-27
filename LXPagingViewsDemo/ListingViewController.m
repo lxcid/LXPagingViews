@@ -102,10 +102,12 @@
     // Configure the cell...
     switch (indexPath.row) {
         case 0: {
-            cell.textLabel.text = @"PagingView";
+            cell.textLabel.text = @"Normal Paging View";
+            cell.accessibilityLabel = @"Normal Paging View";
         } break;
         case 1: {
-            cell.textLabel.text = @"PeepingPagingView";
+            cell.textLabel.text = @"Peeping Paging View";
+            cell.accessibilityLabel = @"Peeping Paging View";
         } break;
         default: {
         } break;
